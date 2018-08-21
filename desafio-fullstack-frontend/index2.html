@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="appDesafioFullStack">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Full-Stack</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Style -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="src/css/app.css" />
+  <!-- AngularJS -->
+  <script src="node_modules/angular/angular.js"></script>
+  <script src="node_modules/angular-route/angular-route.js"></script>
+  <!-- Config -->
+  <script src="app.js"></script>
+  <script src="appConfig.js"></script>
+  <!-- Controllers -->
+  <script src="src/views/alerta/alerta.controller.js"></script>
+  <!-- Service -->
+  <script src="src/views/alerta/AlertaService.js"></script>
+  <!-- Utils -->
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/angular-recaptcha/release/angular-recaptcha.js"></script>
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-info">
+    <a class="navbar-brand" href="#">Alerta</a>
+  </nav>
+  <div id="main" class="jumbotron">
+    <div ng-view></div>
+  </div>
+</body>
+
+</html>

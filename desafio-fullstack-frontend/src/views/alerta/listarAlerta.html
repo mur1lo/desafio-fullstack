@@ -1,0 +1,104 @@
+<div class="container">
+    <h1>Example usage</h1>
+    <div class="alert alert-success" ng-show="showdialog">
+        <button type="button" class="close" ng-click="showdialog=false" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <strong>Yeah, you've submitted the form.</strong>
+        <br />Now you have to validate the user response on your server.
+        <a href="https://developers.google.com/recaptcha/docs/verify"
+            target="_blank">here is how</a>
+    </div>
+    <form name="registerForm" role="form" ng-submit="register()" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : registerForm.email.$invalid && !registerForm.email.$pristine }">
+            <label for="email">Email address*</label>
+            <input type="email" class="form-control" name="email" ng-model="user.email" required>
+            <span ng-show="registerForm.email.$invalid && !registerForm.email.$pristine" class="help-block">Please enter your email address</span>
+        </div>
+        <div class="form-group">
+            <label>Captcha*</label>
+            <div re-captcha ng-model="user.captcha"></div>
+        </div>
+
+        <button type="submit" ng-disabled="registerForm.$invalid" class="btn btn-primary">Create new Account</button>
+        <form>
+
+
+                <div class="g-recaptcha" data-sitekey="6LcOB2AUAAAAAOcSAPmPoFxkzNOwkKChtUhKASjB"></div>
+
+</div>
+
+<div class="container">
+    <h2>Debug output</h2>
+    <pre>
+        {{user | json}}
+    </pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid">
+
+
+
+
+
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Procure o alerta" aria-label="Procure o alerta" aria-describedby="basic-addon2"
+            ng-model="searchText">
+        <div class="input-group-append">
+            <button ng-click="processarAlertas()" class="btn btn-outline-info" type="button">Processar alertas</button>
+        </div>
+    </div>
+
+
+    <div ng-if="listaMsg.length === 0" class="alert alert-warning" role="alert">
+        Nenhum alerta processado!
+    </div>
+
+    <div ng-if="listaMsg.length >= 0" class="card-columns">
+
+        <div ng-repeat="alerta in listaMsg | filter:searchText | orderBy: 'flTipo'" class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{::alerta.produto}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{::alerta.pontoDeVenda}}</h6>
+                <p class="card-text">{{::alerta.descricao}}</p>
+                <p ng-if="alerta.margem" class="card-text">
+                    <span class="font-weight-bold">Margem:</span> {{::alerta.margem}}
+                </p>
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" ng-click="showModal(alerta)">
+                    Visualizar
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+ <div class="modal fade" id="alertaModal" tabindex="-1" role="dialog" aria-labelledby="alertaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="alertaModalLabel">{{alertaSelected.rotulo}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <span class="font-weight-bold">Notificante: </span>{{alertaSelected.notificante}}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>  -->

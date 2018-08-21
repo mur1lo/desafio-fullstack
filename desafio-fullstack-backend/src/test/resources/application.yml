@@ -1,0 +1,9 @@
+spring:
+    profiles:
+    data:
+        mongodb:
+            host: localhost
+            port: 27117
+            database: selecao_test
+server:
+    port: 8085            

@@ -1,0 +1,21 @@
+{
+  "name": "desafio-fullstack-frontend",
+  "version": "1.0.0",
+  "description": "desafio-fullstack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "http-server -p 3000  -o",
+    "gulp": "gulp",
+    "gulp serve": "gulp serve"
+  },
+  "author": "Murilo da Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "angular": "^1.6.10",
+    "angular-recaptcha": "^4.1.5",
+    "angular-route": "^1.7.2",
+    "bootstrap": "^4.1.1",
+    "http-server": "^0.11.1",
+    "jquery": "^3.3.1"
+  }
+}
